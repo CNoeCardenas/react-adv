@@ -1,28 +1,28 @@
 import {
-  BrowserRouter as Router,
+  BrowserRouter,
   Switch,
   Route,
-  NavLink
-} from 'react-router-dom';
-
-import logo from '../logo.svg';
+  NavLink,
+} from "react-router-dom";
+import { routes } from "./routes";
+import logo from "../logo.svg";
 
 export const Navigation = () => {
   return (
-    <Router>
+    <BrowserRouter>
       <div className="main-layout">
         <nav>
-            <img src={ logo } alt="React Logo" />
+          <img src={logo} alt="React Logo" />
           <ul>
-            <li>
-              <NavLink to="/" activeClassName="nav-active" exact>Home</NavLink>
-            </li>
-            <li>
-              <NavLink to="/about" activeClassName="nav-active" exact>About</NavLink>
-            </li>
-            <li>
-              <NavLink to="/users" activeClassName="nav-active" exact>Users</NavLink>
-            </li>
+            {routes.map(({to, name}) => (
+               <li key={ to }>
+               <NavLink 
+                   to={ to } 
+                   className={ ({ isActive }) => isActive ? 'nav-active' : '' }>
+                   { name }
+               </NavLink>
+           </li>
+            ))}
           </ul>
         </nav>
 
@@ -40,6 +40,6 @@ export const Navigation = () => {
           </Route>
         </Switch>
       </div>
-    </Router>
+    </BrowserRouter>
   );
-}
+};
