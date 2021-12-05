@@ -21,8 +21,7 @@ export const Navigation = () => {
               <li key={to}>
                 <NavLink
                   to={to}
-                  className={isActive =>
-                    isActive ? 'nav-active' : ''
+                  className={(navData) => navData.isActive ? 'nav-active' : ''
                   }
                 >
                   {name}
