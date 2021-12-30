@@ -1,0 +1,60 @@
+[
+    {
+        "type": "text",
+        "name": "firstName",
+        "placeholder": "Cristian",
+        "label": "First Name",
+        "value": "",
+        "validations": [
+            {
+                "type": "required",
+                "message": "Required"
+            },
+            {
+                "type": "minLength",
+                "value": 5,
+                "message": "Must be 5 characters or more"
+            }
+        ]
+    },
+    {
+        "type": "text",
+        "name": "lastName",
+        "placeholder": "Cardenás",
+        "label": "Last Name",
+        "value": ""
+    },
+    {
+        "type": "email",
+        "name": "email",
+        "placeholder": "Cardenás@gmail.com",
+        "label": "Email",
+        "value": "",
+        "validations": [
+            {
+                "type": "email",
+                "message": "Must be a valid email"
+            }
+        ]
+    },
+    {
+        "type": "select",
+        "name": "favoriteGame",
+        "label": "Favorite Game",
+        "value": "",
+        "options": [
+            {
+                "id": "",
+                "description": "Select empty"
+            },
+            {
+                "id": "asd-as-da-sd-asd-",
+                "description": "CTR"
+            },
+            {
+                "id": "asd-as-da-sd-asd-2222",
+                "description": "LOL"
+            }
+        ]
+    }
+]

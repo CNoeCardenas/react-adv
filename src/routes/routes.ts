@@ -1,7 +1,8 @@
 import { FormikAbstraction, FormikBasicPage, FormikComponents, FormikYupPage, RegisterPage } from "../forms/pages";
 import { lazy, LazyExoticComponent } from "react";
 import { NoLazyComponent } from "../lazy-load-module/pages/NoLazyComponent";
-import { } from "../forms/pages/RegisterPage";
+import { RegisterFormikPage } from "../forms/pages/RegisterFormikPage";
+import { DynamicForm } from "../forms/pages/DynamicForm";
 
 type JSXComponent = () => JSX.Element
 interface Route {
@@ -54,5 +55,17 @@ export const routes: Route[] = [
         to: '/FormikAbstraction',
         Component: FormikAbstraction,
         name: 'Formik Abstraction'
+    },
+    {
+        path: 'RegisterFormikPage',
+        to: '/RegisterFormikPage',
+        Component: RegisterFormikPage,
+        name: 'Register Formik'
+    },
+    {
+        path: 'DynamicForm',
+        to: '/DynamicForm',
+        Component: DynamicForm,
+        name: 'Dynamic Formik'
     }
 ]
